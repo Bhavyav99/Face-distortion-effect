@@ -24,7 +24,7 @@
 
 ### link to the dataset: 
 
-[Dataset]([https://www.genome.gov/](https://github.com/user/repo/blob/branch/other_file.md](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html))
+[Dataset](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
 
 
 you can download aligned and cropped images. 
