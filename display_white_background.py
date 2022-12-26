@@ -5,6 +5,7 @@ import  numpy as np
 import cv2
 import random
 from numpy import asarray
+from rembg import remove
 
 
 images=[]
@@ -14,7 +15,7 @@ for roots,dirs,files in os.walk('C:/Users/resu/Desktop/celeba/img_align_celeba')
             images.append(os.path.join(roots,file))
 
 
-video_name = 'mygeneratedvideo.mp4'
+video_name = 'video2.mp4'
 fourcc =  cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 
 
@@ -24,7 +25,7 @@ choosen_images=[]
 
 img1 = Image.open("C:/Users/resu/Desktop/CVP Project/Face-distortion-effect/cross_background.png")
 print(img1.size)
-for img  in range(0,20):
+for img  in range(0,1):
     selected_image1=None
     selected_image2=None
 
@@ -45,12 +46,24 @@ for img  in range(0,20):
     img2 = Image.open(selected_image1)
     img3 = Image.open(selected_image2)
 
+
     new_width = 400
     new_height = 500
-    img2 = img2.resize((new_width, new_height), Image.ANTIALIAS)
-    img3 = img3.resize((new_width, new_height), Image.ANTIALIAS)
+    img2 = img2.resize((new_width, new_height))
+    img3 = img3.resize((new_width, new_height))
 
-    img1.paste(img2, (200, 200))
+
+    #img2.show()
+    img2 = remove(img2)
+    img3 = remove(img3)
+
+    #img2.show()
+    img2 = img2.resize((new_width, new_height))
+    img2.show()
+
+
+
+    img1.paste(remove(img2), (200, 200))
     img1.paste(img3, (1250, 200))
     numpydata = np.asarray(img1)
     #img1.show()
