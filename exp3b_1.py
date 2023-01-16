@@ -13,7 +13,7 @@ for roots,dirs,files in os.walk('C:/Users/resu/Desktop/celeba/face distortion'):
             images.append(os.path.join(roots,file))
 
 
-video_name = 'sample_video.mp4'
+video_name = 'exp3b_1.mp4'
 fourcc =  cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 
 
@@ -44,13 +44,13 @@ for img  in range(0,20):
     img2 = Image.open(selected_image1)
     img3 = Image.open(selected_image2)
 
-    new_width = 400
-    new_height = 500
+    new_width = 600
+    new_height = 600
     img2 = img2.resize((new_width, new_height), Image.ANTIALIAS)
     img3 = img3.resize((new_width, new_height), Image.ANTIALIAS)
 
-    img1.paste(img2, (200, 200))
-    img1.paste(img3, (1250, 200))
+    img1.paste(img2, (100, 150))
+    img1.paste(img3, (1100, 150))
     numpydata = np.asarray(img1)
     #img1.show()
 
