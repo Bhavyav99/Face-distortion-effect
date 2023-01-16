@@ -6,15 +6,14 @@ import cv2
 import random
 from numpy import asarray
 
-
 images=[]
-for roots,dirs,files in os.walk('C:/Users/resu/Desktop/celeba/img_align_celeba'):
+for roots,dirs,files in os.walk('C:/Users/resu/Desktop/celeba/face distortion'):
     for file in files:
         if file.endswith('.jpg'):
             images.append(os.path.join(roots,file))
 
 
-video_name = 'mygeneratedvideo.mp4'
+video_name = 'sample_video.mp4'
 fourcc =  cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 
 
@@ -56,6 +55,8 @@ for img  in range(0,20):
     #img1.show()
 
     video.write(cv2.cvtColor(np.array(numpydata), cv2.COLOR_RGB2BGR))
+    print("done")
 
 video.release()
+print("video done")
 
