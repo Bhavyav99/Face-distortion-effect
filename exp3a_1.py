@@ -7,13 +7,13 @@ import random
 from numpy import asarray
 
 images=[]
-for roots,dirs,files in os.walk('C:/Users/resu/Desktop/celeba/face distortion'):
+for roots,dirs,files in os.walk('C:/Users/resu/Desktop/CVP Project/Face-distortion-effect/celeba dataset/'):
     for file in files:
         if file.endswith('.jpg'):
             images.append(os.path.join(roots,file))
 
 
-video_name = 'exp3a_1.mp4'
+video_name = 'Video_3_far_from_centre.mp4'
 fourcc =  cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 
 
@@ -23,7 +23,7 @@ choosen_images=[]
 
 img1 = Image.open("C:/Users/resu/Desktop/CVP Project/Face-distortion-effect/cross_background.png")
 print(img1.size)
-for img  in range(0,20):
+for img  in range(0,40):
     selected_image1=None
     selected_image2=None
 
