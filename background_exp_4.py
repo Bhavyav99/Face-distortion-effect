@@ -13,7 +13,7 @@ for roots,dirs,files in os.walk('C:/Users/resu/Desktop/CVP Project/Face-distorti
             images.append(os.path.join(roots,file))
 
 
-video_name = 'exp_4.mp4'
+video_name = 'Video_5_background_removal.mp4'
 fourcc =  cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 
 
