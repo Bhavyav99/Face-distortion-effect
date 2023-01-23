@@ -13,7 +13,7 @@ for roots,dirs,files in os.walk('C:/Users/resu/Desktop/celeba/face distortion'):
             images.append(os.path.join(roots,file))
 
 
-video_name = 'sample_video.mp4'
+video_name = 'video-1_Sample.mp4'
 fourcc =  cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 
 
